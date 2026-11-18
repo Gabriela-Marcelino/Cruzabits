@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CruzaBits — Cruzadinha de Arquitetura Computacional</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Cruza<span>Bits</span></h1>
+    <p>Cruzadinha de Arquitetura Computacional com letras embaralhadas e várias dicas por palavra.</p>
+  </header>
+
+  <main class="jogo">
+    <section class="area-tabuleiro">
+      <div class="placar">
+        <span id="contador">0 de 16 palavras</span>
+        <span id="contador-dicas">Dicas extras usadas: 0</span>
+      </div>
+
+      <div id="tabuleiro" class="tabuleiro" aria-label="Tabuleiro da cruzadinha"></div>
+
+      <div class="botoes">
+        <button id="btn-conferir" class="btn principal">Conferir</button>
+        <button id="btn-reiniciar" class="btn">Reiniciar</button>
+      </div>
+      <p id="mensagem" class="mensagem" aria-live="polite"></p>
+    </section>
+
+    <aside class="painel">
+      <div class="palavra-ativa">
+        <div class="ativa-topo">
+          <span id="ativa-rotulo" class="rotulo">Clique numa casa ou numa pista</span>
+          <span id="ativa-tamanho" class="tamanho"></span>
+        </div>
+        <p id="ativa-dica" class="dica-atual">Escolha uma palavra para ver a dica e as letras embaralhadas.</p>
+        <div class="acoes-dica">
+          <button id="btn-dica" class="btn pequeno" disabled>Outra dica</button>
+          <span id="ativa-num-dica" class="num-dica"></span>
+        </div>
+        <div id="letras" class="letras" aria-label="Letras embaralhadas"></div>
+        <div class="acoes-letras">
+          <button id="btn-embaralhar" class="btn pequeno" disabled>Embaralhar</button>
+          <button id="btn-apagar" class="btn pequeno" disabled>Apagar palavra</button>
+        </div>
+      </div>
+
+      <div class="listas">
+        <div>
+          <h2>Horizontais</h2>
+          <ol id="lista-h" class="lista-pistas"></ol>
+        </div>
+        <div>
+          <h2>Verticais</h2>
+          <ol id="lista-v" class="lista-pistas"></ol>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="rodape">
+    <p>Digite direto nas casas ou clique nas letras embaralhadas. Clique de novo na mesma casa para trocar entre horizontal e vertical.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
